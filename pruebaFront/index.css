@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* estilos para la tabla */
+table {
+  border: 1px solid rgb(204, 204, 204);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+  
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  font-weight: 900;
+}
+
+table thead{
+  background-color: rgb(28, 141, 141);
+}
+
+tbody:hover{
+  background-color: #ddd;
+}
+  
+table tr {
+  border: 1px solid rgb(226, 226, 226);
+  padding: .35em;
+}
+
+table td{
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.753);
+}
+  
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+  
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* estilos para los botones */
+#botonCargar, #botonCargarCrypto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+button{
+  padding: 3em;
+  border-radius: 5px;
+  border: 1px solid rgb(173, 162, 162);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 900;
+}
+
+button:hover{
+  background: rgb(255,245,254);
+  background: linear-gradient(90deg, rgba(255,245,254,1) 0%, rgba(28,141,141,1) 100%, rgba(0,212,255,1) 100%);
+  transform: scale(1.1);
+}
+
+img{
+  width: 40%;
+  height: 40%;
+}
+
+/* responsive de la tabla */
+@media screen and (max-width: 600px) {
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    display: none;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(class);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
